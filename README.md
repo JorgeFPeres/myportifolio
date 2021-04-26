@@ -29,6 +29,7 @@
 This project was developed using the following technologies:
 
 - [React](https://reactjs.org)
+- [Styled Component](https://styled-components.com/)
 
 ## 🚀 Getting started
 
