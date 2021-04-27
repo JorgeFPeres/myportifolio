@@ -18,6 +18,7 @@ const HomePage = () => {
 const NavContainer = styled.div`
   display: flex;
   max-width: 1440px;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto;
   height: 100vh;
