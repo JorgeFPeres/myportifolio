@@ -7,23 +7,16 @@ import RigthBar from '../components/RigthBar'
 const HomePage = () => {
   return (
     <NavContainer>
+      <RigthBar />
       <LeftBar />
       <Center />
-
-      <RigthBar />
     </NavContainer>
   )
 }
 
 const NavContainer = styled.div`
-  display: flex;
-  max-width: 1440px;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
-  height: 100vh;
-  flex-wrap: nowrap;
-  position: relative;
+  display: grid;
+  grid-template-columns: 80px 290px 1fr 120px 80px;
   }
 `
 

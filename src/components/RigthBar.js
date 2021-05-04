@@ -34,21 +34,19 @@ const RigthBar = () => {
 }
 
 const Wrapper = styled.nav`
-  position: absolute;
-  right: 0;
-
+  grid-column: 4 / 5;
+  grid-row: 1;
   .container {
-    position: fixed;
-    height: calc(100vh - 0px);
-    display: flex;
-    align-items: center;
     height: 100vh;
-
-    z-index: 9999;
+    width: 120px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
     background: white;
     box-shadow: rgb(47 122 249 / 10%) 4px 0px 10px;
     transition: all 300ms ease-in 0s;
-    padding: 30px;
   }
 
   .menu1 {

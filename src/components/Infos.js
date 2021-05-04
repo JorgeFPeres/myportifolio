@@ -23,69 +23,71 @@ const Infos = () => {
       </div>
       <div className='underline'></div>
       <div className='languages-container'>
-        <h4>Languages</h4>
-        <div>
-          <div className='languages-infos'>
-            <p>Portuguese</p>
-            <span>100%</span>
+        <h4 className='title'>Languages</h4>
+        <div className='skill'>
+          <p>Node</p>
+          <div className='skill-container'>
+            <div className='skill-value'></div>
+            <p className='skill-text'>50%</p>
           </div>
-          <div className='bars'></div>
-          <div className='languages-infos english'>
-            <p>English</p>
-            <span>80%</span>
+        </div>
+        <div className='skill'>
+          <p>Node</p>
+          <div className='skill-container'>
+            <div className='skill-value'></div>
+            <p className='skill-text'>50%</p>
           </div>
-          <div className='bars teste'></div>
-          <div className='languages-infos spanish'>
-            <p>Spanish</p>
-            <span>50%</span>
+        </div>
+        <div className='skill'>
+          <p>Node</p>
+          <div className='skill-container'>
+            <div className='skill-value'></div>
+            <p className='skill-text'>50%</p>
           </div>
-          <div className='bars teste1'></div>
+        </div>
+
+        <div className='underline'></div>
+        <h4 className='title'>Skills</h4>
+        <div className='skill'>
+          <p>Node</p>
+          <div className='skill-container'>
+            <div className='skill-value'></div>
+            <p className='skill-text'>50%</p>
+          </div>
+        </div>
+        <div className='skill'>
+          <p>Node</p>
+          <div className='skill-container'>
+            <div className='skill-value'></div>
+            <p className='skill-text'>50%</p>
+          </div>
+        </div>
+        <div className='skill'>
+          <p>Node</p>
+          <div className='skill-container'>
+            <div className='skill-value'></div>
+            <p className='skill-text'>50%</p>
+          </div>
         </div>
       </div>
       <div className='underline'></div>
       <div className='languages-container'>
-        <h4>Skills</h4>
-        <div>
-          <div className='languages-infos'>
-            <p>HTML</p>
-            <span>90%</span>
-          </div>
-          <div className='bars'></div>
-          <div className='languages-infos english'>
-            <p>CSS</p>
-            <span>80%</span>
-          </div>
-          <div className='bars teste'></div>
-          <div className='languages-infos english'>
-            <p>JS</p>
-            <span>80%</span>
-          </div>
-          <div className='bars teste'></div>
-          <div className='languages-infos spanish'>
-            <p>React JS</p>
-            <span>50%</span>
-          </div>
-          <div className='bars teste1'></div>
+        <h4 className='title'>Extra Skills</h4>
+        <div className='extra-skills'>
+          <BsCaretRight className='color-icon' />
+          <p>Styled Components, Sass</p>
         </div>
-        <div className='underline'></div>
-        <div className='languages-container'>
-          <h4>Extra Skills</h4>
-          <div className='extra-skills'>
-            <BsCaretRight className='color-icon' />
-            <p>Styled Components, Sass</p>
-          </div>
-          <div className='extra-skills'>
-            <BsCaretRight className='color-icon' />
-            <p>Next Js, React Native</p>
-          </div>
-          <div className='extra-skills'>
-            <BsCaretRight className='color-icon' />
-            <p>Gulp, Webpack</p>
-          </div>
-          <div className='extra-skills'>
-            <BsCaretRight className='color-icon' />
-            <p>Git knowldge</p>
-          </div>
+        <div className='extra-skills'>
+          <BsCaretRight className='color-icon' />
+          <p>Next Js, React Native</p>
+        </div>
+        <div className='extra-skills'>
+          <BsCaretRight className='color-icon' />
+          <p>Gulp, Webpack</p>
+        </div>
+        <div className='extra-skills'>
+          <BsCaretRight className='color-icon' />
+          <p>Git knowldge</p>
         </div>
       </div>
     </Wrapper>
@@ -109,6 +111,7 @@ const Wrapper = styled.div`
       padding: 5px 8px;
     }
     p {
+      color: #2b2b2b;
       background: #ffb400;
       padding: 5px 8px;
     }
@@ -125,53 +128,44 @@ const Wrapper = styled.div`
     color: #7eb942;
   }
   .languages-container {
-    padding-top: 30px;
     h4 {
+      padding-top: 30px;
       font-size: 18px;
       font-weight: 500;
       color: #2b2b2b;
       line-height: 22.25px;
     }
   }
-  .bars {
-    display: flex;
-    height: 9px;
-    border: 1px solid #ffb400;
-    border-radius: 20px;
-    padding: 2px;
-  }
-  .bars::before {
-    content: '';
-    width: 100%;
-    border-radius: 20px;
-    background: #ffb400;
-  }
-  /* automatizar */
-  .teste::before {
-    width: 80%;
-  }
 
-  .english {
-    width: 87%;
+  .skill {
+    margin-bottom: 1.25rem;
   }
-
-  .teste1::before {
-    width: 50%;
-  }
-
-  .spanish {
-    width: 57%;
-  }
-  .languages-infos {
-    margin-top: 1rem;
+  .skill p {
     margin-bottom: 0.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-transform: capitalize;
+  }
+  .skill-container {
+    background-color: var(--clr-white);
+    width: 100%;
+    height: 0.5rem;
+    border-radius: var(--radius);
+    position: relative;
+  }
+  .skill-value {
+    background: #ffb400;
+    width: 50%;
+    height: 100%;
+    border-radius: var(--radius);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .skill-text {
     font-size: 13px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #767676;
+    position: absolute;
+    top: -1.3rem;
+    left: 50%;
+    transform: translate(-50%);
   }
   .extra-skills {
     padding: 10px 0;
